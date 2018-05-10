@@ -1,0 +1,17 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+
+.mat-toolbar {
+  background-color:#1B242F;
+  border-bottom: 3px solid #04C2C9;
+  /* #00A1A7 */
+  /* #04C2C9 */
+}
+
