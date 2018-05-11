@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { WorkComponent } from './work/work.component';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+
+import { StartComponent } from './start/start.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'work', component: WorkComponent }
+  { path: '', redirectTo: '/start', pathMatch: 'full' },
+  { path: 'start', component: StartComponent },
+  { path: 'content', loadChildren: './content/content.module#ContentModule'},
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [
+      RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
+  ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {

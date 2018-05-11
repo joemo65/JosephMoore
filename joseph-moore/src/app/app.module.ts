@@ -4,21 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import { AppRoutingModule } from './/app-routing.module';
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { WorkComponent } from './work/work.component';
+import { AppRoutingModule } from './app-routing.module';
+import { StartComponent } from './start/start.component';
+import { ContentModule } from './content/content.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    AboutComponent,
-    SkillsComponent,
-    WorkComponent
+    StartComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +25,8 @@ import { WorkComponent } from './work/work.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //ContentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
